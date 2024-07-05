@@ -7,7 +7,7 @@ import sendIcon from "@iconify-icons/fa-solid/paper-plane";
 import microphoneIcon from "@iconify-icons/fa-solid/microphone";
 import { Link } from "react-router-dom";
 
-const genAI = new GoogleGenerativeAI("AIzaSyACYvlSd5AnMHLx_MXzgLwg8--Nt1skZsk");
+const genAI = new GoogleGenerativeAI(process.env.VITE_GOOGLE_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 const Chat = () => {
