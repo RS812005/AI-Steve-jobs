@@ -1,0 +1,80 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f9f9f9; /* Very Light Gray */
+}
+
+.messages-container {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: #ffffff; /* White */
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  max-width: 40%; /* Max width to avoid too long messages */
+  width: fit-content; /* Adjust width to fit content */
+  word-wrap: break-word; /* Ensure text wraps within the container */
+}
+
+.message.user {
+  justify-content: flex-end;
+  background-color: #f5912e; /* Orange */
+  color: #ffffff; /* White */
+  align-self: flex-end; /* Align user message to the right */
+  margin-left: auto; /* Ensure the message stays on the right */
+  flex-direction: row-reverse; /* Make profile picture appear on the right */
+}
+
+.message.bot {
+  justify-content: flex-start;
+  background-color: #e6e6e8; /* Gray */
+  color: #18181b; /* Dark Gray */
+  align-self: flex-start; /* Align bot message to the left */
+  margin-right: auto; /* Ensure the message stays on the left */
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px; /* Margin for spacing */
+}
+
+.input-form {
+  display: flex;
+  padding: 10px;
+  background-color: #f7f7f7; /* Very Light Gray */
+}
+
+.chat-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #e6e6e8; /* Gray */
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.send-button,
+.microphone-button {
+  background-color: #ff6a27; /* Orange */
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-button:focus,
+.microphone-button:focus {
+  outline: none;
+}
